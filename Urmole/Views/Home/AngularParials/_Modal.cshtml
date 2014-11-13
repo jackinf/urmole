@@ -1,0 +1,23 @@
+﻿@*
+    ==================================
+    ===========     MODAL VIEW
+    ==================================
+*@
+
+<div class="container" style="margin: 10px;">
+    <h2>I am modal</h2> 
+
+    <hr/>
+
+    <button class="btn btn-success" ng-click="showPartial1()" ng-hide="shownPartial == 1">Show Part 1</button>
+    <button class="btn btn-danger" ng-click="showPartial2()" ng-hide="shownPartial == 2">Show Part 2</button>
+    
+    <div ng-show="shownPartial == 1">
+        @Html.Partial("_PartialOne")
+    </div>
+    
+    <div ng-show="shownPartial == 2">
+        @Html.Partial("_PartialTwo")
+    </div>
+
+</div>
